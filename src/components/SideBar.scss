@@ -1,0 +1,20 @@
+@import "../Model.scss";
+
+.side-bar {
+  background-color: #55b68a;
+  width: 20%;
+  float: left;
+  color: $white;
+  text-align: center;
+  border-radius: 8px 0 0 8px;
+  padding: 12px 1%;
+}
+.side-bar .divider {
+  margin: 24px 0 8px !important;
+}
+
+.side-bar .view-resume-btn {
+  color: $white !important;
+  background-color: $black !important;
+  text-transform: none !important;
+}
