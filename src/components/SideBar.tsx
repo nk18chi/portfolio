@@ -1,22 +1,45 @@
 import React from "react";
 import "./SideBar.scss";
-import Button from "@material-ui/core/Button";
-import DescriptionIcon from "@material-ui/icons/Description";
-import Profile from "./profile/Profile";
-import SocialLink from "./socialLink/SocialLink";
-import HeadLine from "./headline/HeadLine";
-import Divider from "@material-ui/core/Divider";
+import { Button, List, Divider } from "@material-ui/core/";
+import { GitHub, LinkedIn, Twitter, Person, Stars, LaptopMac, MailOutline, Description } from "@material-ui/icons/";
+import IconButtonLink from "./IconButtonLink";
+import MenuListItem from "./MenuListItem";
 
 const SideBar: React.FC = () => {
+  let iconData = [
+    { url: "https://github.com/nk18chi", element: <GitHub /> },
+    { url: "", element: <LinkedIn /> },
+    { url: "", element: <Twitter /> },
+    { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/leetcode.svg' alt='' /> },
+  ];
+
+  let menuList = [
+    { text: "Person", icon: <Person /> },
+    { text: "Skills", icon: <Stars /> },
+    { text: "Portfolio", icon: <LaptopMac /> },
+    { text: "Contact", icon: <MailOutline /> },
+  ];
+
   return (
     <div className='side-bar'>
-      <Profile />
-      <SocialLink />
-      <Button className='view-resume-btn' variant='contained' size='large' startIcon={<DescriptionIcon />}>
+      <div className='profile'>
+        <h1>Naoki Mita</h1>
+        <img src='/portfolio/img/main.jpg' alt='' />
+        <p>Hello, my name is Naoki Mita. I am a software developer. Take a look at my personal page!</p>
+      </div>
+
+      <div className='social-link'>
+        <ul>{iconData.length > 0 && iconData.map((i: any) => <IconButtonLink url={i.url} icon={i.element} />)}</ul>
+      </div>
+
+      <Button className='view-resume-btn' variant='contained' size='large' startIcon={<Description />}>
         View Resume
       </Button>
       <Divider className='divider' />
-      <HeadLine />
+
+      <div className='headline'>
+        <List component='nav'>{menuList.length > 0 && menuList.map((list: any) => <MenuListItem text={list.text} icon={list.icon} />)}</List>
+      </div>
     </div>
   );
 };
