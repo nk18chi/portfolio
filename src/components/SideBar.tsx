@@ -6,14 +6,14 @@ import IconButtonLink from "./IconButtonLink";
 import MenuListItem from "./MenuListItem";
 
 const SideBar: React.FC = () => {
-  let iconData = [
+  const iconData = [
     { url: "https://github.com/nk18chi", element: <GitHub /> },
     { url: "", element: <LinkedIn /> },
     { url: "", element: <Twitter /> },
     { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/leetcode.svg' alt='' /> },
   ];
 
-  let menuList = [
+  const menuList = [
     { text: "Person", icon: <Person /> },
     { text: "Skill Sets", icon: <Stars /> },
     { text: "Portfolio", icon: <LaptopMac /> },

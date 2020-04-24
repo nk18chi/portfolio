@@ -2,7 +2,7 @@ import React from "react";
 import "./MainColumn.scss";
 
 const MainColumn: React.FC = () => {
-  let skillSets = [
+  const skillSets = [
     {
       title: "Typescript & React",
       description:
