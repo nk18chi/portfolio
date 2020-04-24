@@ -2,3 +2,35 @@
   width: 78%;
   float: right;
 }
+
+.about-me-description {
+  margin: 4%;
+}
+
+.about-me-description,
+.about-me-image {
+  width: 42%;
+  float: left;
+}
+
+.about-me-description {
+  margin: 4% 6%;
+}
+
+.about-me-image {
+  margin: 4% 2%;
+}
+
+.about-me {
+  overflow: hidden;
+}
+
+.about-me h1 {
+  font-size: 32px;
+}
+
+.about-me h2 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 12px 0;
+}
