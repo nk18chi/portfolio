@@ -29,6 +29,21 @@ const MainColumn: React.FC = () => {
     },
   ];
 
+  const myValues = [
+    {
+      title: "Stay Curious",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+    },
+    {
+      title: "Stay Curious",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+    },
+    {
+      title: "Stay Curious",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+    },
+  ];
+
   return (
     <article className='main-column'>
       <section className='about-me block'>
@@ -67,6 +82,19 @@ const MainColumn: React.FC = () => {
                 </div>
                 <h3>{skill.title}</h3>
                 <p>{skill.description}</p>
+              </li>
+            ))}
+        </ul>
+      </section>
+
+      <section className='my-values block'>
+        <h2>My Values</h2>
+        <ul>
+          {myValues.length > 0 &&
+            myValues.map((value: any) => (
+              <li>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
               </li>
             ))}
         </ul>
