@@ -15,7 +15,7 @@ const SideBar: React.FC = () => {
 
   let menuList = [
     { text: "Person", icon: <Person /> },
-    { text: "Skills", icon: <Stars /> },
+    { text: "Skill Sets", icon: <Stars /> },
     { text: "Portfolio", icon: <LaptopMac /> },
     { text: "Contact", icon: <MailOutline /> },
   ];
@@ -23,7 +23,7 @@ const SideBar: React.FC = () => {
   return (
     <div className='side-bar'>
       <div className='profile'>
-        <h1>Naoki Mita</h1>
+        <h2>Naoki Mita</h2>
         <img src='/portfolio/img/main.jpg' alt='' />
         <p>Hello, my name is Naoki Mita. I am a software developer. Take a look at my personal page!</p>
       </div>

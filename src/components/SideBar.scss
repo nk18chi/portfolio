@@ -6,7 +6,6 @@
   float: left;
   color: $white;
   text-align: center;
-  border-radius: 8px 0 0 8px;
   padding: 12px 1%;
 }
 .side-bar .divider {
@@ -25,8 +24,9 @@
   padding: 12px 0px;
 }
 
-.profile h1 {
+.profile h2 {
   font-size: 26px;
+  padding: 8px 0;
 }
 
 .profile p {

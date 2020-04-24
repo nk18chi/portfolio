@@ -5,10 +5,10 @@ import MainColumn from "./components/MainColumn";
 
 function App() {
   return (
-    <>
+    <div className='container'>
       <SideBar />
       <MainColumn />
-    </>
+    </div>
   );
 }
 

@@ -4,7 +4,7 @@ import "./MainColumn.scss";
 const MainColumn: React.FC = () => {
   return (
     <article className='main-column'>
-      <section className='about-me'>
+      <section className='about-me block'>
         <div className='about-me-description'>
           <h1>Naoki Mita (美田 直毅)</h1>
           <h2>Software Developer / Data Analyst</h2>

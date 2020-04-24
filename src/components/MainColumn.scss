@@ -7,18 +7,22 @@
   margin: 4%;
 }
 
-.about-me-description,
+.about-me-description {
+  width: 54%;
+  float: left;
+}
+
 .about-me-image {
-  width: 42%;
+  width: 40%;
   float: left;
 }
 
 .about-me-description {
-  margin: 4% 6%;
+  margin: 0% 0% 0% 6%;
 }
 
 .about-me-image {
-  margin: 4% 2%;
+  text-align: center;
 }
 
 .about-me {
