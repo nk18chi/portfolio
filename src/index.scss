@@ -148,7 +148,7 @@ a {
 /* ---------- reset css end  ----------  */
 
 p {
-  margin: 8px 0;
+  margin: 12px 0;
   line-height: 24px;
 }
 
@@ -160,11 +160,12 @@ p {
 .container {
   overflow: hidden;
   margin: 24px;
-  background: #fff;
+  background-color: $siteColor;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border-radius: 8px;
 }
 
 .block {
-  margin: 4% 0;
+  padding: 4% 6%;
+  overflow: hidden;
 }

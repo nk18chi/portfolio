@@ -1,24 +1,25 @@
+@import "../Model.scss";
+
 .main-column {
   width: 78%;
   float: right;
+  background: #fff;
+}
+
+.main-column h2 {
+  font-size: 28px;
+  border-left: 4px solid $siteColor;
+  padding-left: 8px;
 }
 
 .about-me-description {
-  margin: 4%;
-}
-
-.about-me-description {
-  width: 54%;
+  width: 60%;
   float: left;
 }
 
 .about-me-image {
   width: 40%;
   float: left;
-}
-
-.about-me-description {
-  margin: 0% 0% 0% 6%;
 }
 
 .about-me-image {
@@ -33,8 +34,30 @@
   font-size: 32px;
 }
 
-.about-me h2 {
+.about-me h3 {
   font-size: 23px;
   font-weight: 400;
   margin: 12px 0;
+}
+
+.skill-sets .icon li {
+  display: inline-block;
+}
+
+.skill-sets .icon {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.skill-sets .icon img {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+.skill-sets .skill-each-set {
+  float: left;
+  display: block;
+  width: 23%;
+  margin: 2% 2% 2% 0%;
 }

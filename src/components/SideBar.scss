@@ -1,7 +1,6 @@
 @import "../Model.scss";
 
 .side-bar {
-  background-color: #55b68a;
   width: 20%;
   float: left;
   color: $white;
@@ -21,7 +20,7 @@
 .profile img {
   border-radius: 50%;
   width: 180px;
-  padding: 12px 0px;
+  padding: 4px 0px;
 }
 
 .profile h2 {
