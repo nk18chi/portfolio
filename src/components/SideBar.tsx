@@ -17,7 +17,7 @@ const SideBar: React.FC = () => {
     { text: "About Me", icon: <Person /> },
     { text: "Skill Sets", icon: <FolderSpecial /> },
     { text: "My Values", icon: <Assessment /> },
-    { text: "Portfolio", icon: <LaptopMac /> },
+    { text: "Portfolios", icon: <LaptopMac /> },
     { text: "Contact", icon: <MailOutline /> },
   ];
 

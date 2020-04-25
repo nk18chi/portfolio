@@ -1,5 +1,6 @@
 import React from "react";
 import "./MainColumn.scss";
+import Link from "@material-ui/core/Link";
 
 const MainColumn: React.FC = () => {
   const skillSets = [
@@ -44,11 +45,44 @@ const MainColumn: React.FC = () => {
     },
   ];
 
+  const portFolios = [
+    {
+      image: "/portfolio/img/sample.jpg",
+      title: "My Portfolio",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg", "/portfolio/img/firebase.svg"],
+    },
+    {
+      image: "/portfolio/img/sample.jpg",
+      title: "My Portfolio",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icons: ["/portfolio/img/python.svg", "/portfolio/img/django.svg", "/portfolio/img/mysql.svg", "/portfolio/img/centos.svg"],
+    },
+    {
+      image: "/portfolio/img/sample.jpg",
+      title: "My Portfolio",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
+    },
+    {
+      image: "/portfolio/img/sample.jpg",
+      title: "My Portfolio",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
+    },
+    {
+      image: "/portfolio/img/sample.jpg",
+      title: "My Portfolio",
+      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
+    },
+  ];
+
   return (
     <article className='main-column'>
       <section className='about-me block'>
         <div className='about-me-description'>
-          <h1>Naoki Mita (美田 直毅)</h1>
+          <h1>Naoki Mita</h1>
           <h3>Software Developer / Data Analyst</h3>
           <p>
             I am a software developer specialised in frontend and backend development for web apps. Also, I have experimence of being a data analyst.
@@ -69,13 +103,13 @@ const MainColumn: React.FC = () => {
         <ul>
           {skillSets.length > 0 &&
             skillSets.map((skill: any) => (
-              <li className='skill-each-set'>
+              <li className='four-elements'>
                 <div className='icon'>
                   <ul>
                     {skill.icons.length > 0 &&
                       skill.icons.map((icon: any) => (
                         <li>
-                          <img src={icon} alt='' />
+                          <img className='app-icon' src={icon} alt='' />
                         </li>
                       ))}
                   </ul>
@@ -92,9 +126,37 @@ const MainColumn: React.FC = () => {
         <ul>
           {myValues.length > 0 &&
             myValues.map((value: any) => (
-              <li>
+              <li className='three-elements'>
                 <h3>{value.title}</h3>
                 <p>{value.description}</p>
+              </li>
+            ))}
+        </ul>
+      </section>
+
+      <section className='portfolios block'>
+        <h2>PortFolios</h2>
+        <ul>
+          {portFolios.length > 0 &&
+            portFolios.map((portfolio: any) => (
+              <li className='three-elements card'>
+                <img className='portfolio-thumbnail' src={portfolio.image} alt='' />
+                <div className='portfolio-description'>
+                  <h3>{portfolio.title}</h3>
+                  <p>{portfolio.description}</p>
+                  <p className='font-little-bold'>Applications</p>
+                  <ul className='icons-ul'>
+                    {portfolio.icons.length > 0 &&
+                      portfolio.icons.map((path: any) => (
+                        <li>
+                          <img className='app-icon' src={path} alt='' />
+                        </li>
+                      ))}
+                  </ul>
+                  <div className='view-more'>
+                    <Link></Link>
+                  </div>
+                </div>
               </li>
             ))}
         </ul>
