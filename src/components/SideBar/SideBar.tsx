@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideBar.scss";
 import { Button, List, Divider } from "@material-ui/core/";
-import { GitHub, LinkedIn, Twitter, Person, FolderSpecial, Assessment, LaptopMac, MailOutline, Description } from "@material-ui/icons/";
+import { GitHub, LinkedIn, Twitter, Person, FolderSpecial, Assessment, LaptopMac, Description } from "@material-ui/icons/";
 import IconButtonLink from "./IconButtonLink";
 import MenuListItem from "./MenuListItem";
 
@@ -18,7 +18,6 @@ const SideBar: React.FC = () => {
     { text: "Skill Sets", icon: <FolderSpecial /> },
     { text: "My Values", icon: <Assessment /> },
     { text: "Portfolios", icon: <LaptopMac /> },
-    { text: "Contact", icon: <MailOutline /> },
   ];
 
   return (
