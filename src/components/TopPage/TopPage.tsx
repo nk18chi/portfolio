@@ -1,8 +1,9 @@
 import React from "react";
-import "./MainColumn.scss";
+import "./TopPage.scss";
+import { Link as RouterLink } from "react-router-dom";
 import Link from "@material-ui/core/Link";
 
-const MainColumn: React.FC = () => {
+const TopPage: React.FC = () => {
   const skillSets = [
     {
       title: "Typescript & React",
@@ -47,32 +48,37 @@ const MainColumn: React.FC = () => {
 
   const portFolios = [
     {
+      id: 1,
       image: "/portfolio/img/sample.jpg",
-      title: "My Portfolio",
+      serviceName: "My Portfolio",
       description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
       icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg", "/portfolio/img/firebase.svg"],
     },
     {
+      id: 2,
       image: "/portfolio/img/sample.jpg",
-      title: "My Portfolio",
+      serviceName: "My Portfolio",
       description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
       icons: ["/portfolio/img/python.svg", "/portfolio/img/django.svg", "/portfolio/img/mysql.svg", "/portfolio/img/centos.svg"],
     },
     {
+      id: 3,
       image: "/portfolio/img/sample.jpg",
-      title: "My Portfolio",
+      serviceName: "My Portfolio",
       description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
       icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
     },
     {
+      id: 4,
       image: "/portfolio/img/sample.jpg",
-      title: "My Portfolio",
+      serviceName: "My Portfolio",
       description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
       icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
     },
     {
+      id: 5,
       image: "/portfolio/img/sample.jpg",
-      title: "My Portfolio",
+      serviceName: "My Portfolio",
       description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
       icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
     },
@@ -81,7 +87,7 @@ const MainColumn: React.FC = () => {
   return (
     <article className='main-column'>
       <section className='about-me block'>
-        <div className='about-me-description'>
+        <div className='summary-description'>
           <h1>Naoki Mita</h1>
           <h3>Software Developer / Data Analyst</h3>
           <p>
@@ -89,8 +95,8 @@ const MainColumn: React.FC = () => {
             I believe I can help you to grow up your products in every aspects. Check out my portfolio and online resume.
           </p>
         </div>
-        <div className='about-me-image'>
-          <img src='/portfolio/img/about_me.jpg' alt='' />
+        <div className='summary-image'>
+          <img className='main-thumnail' src='/portfolio/img/about_me.jpg' alt='' />
         </div>
       </section>
 
@@ -104,8 +110,8 @@ const MainColumn: React.FC = () => {
           {skillSets.length > 0 &&
             skillSets.map((skill: any) => (
               <li className='four-elements'>
-                <div className='icon'>
-                  <ul>
+                <div>
+                  <ul className='icon'>
                     {skill.icons.length > 0 &&
                       skill.icons.map((icon: any) => (
                         <li>
@@ -142,7 +148,7 @@ const MainColumn: React.FC = () => {
               <li className='three-elements card'>
                 <img className='portfolio-thumbnail' src={portfolio.image} alt='' />
                 <div className='portfolio-description'>
-                  <h3>{portfolio.title}</h3>
+                  <h3>{portfolio.serviceName}</h3>
                   <p>{portfolio.description}</p>
                   <p className='font-little-bold'>Applications</p>
                   <ul className='icons-ul'>
@@ -154,7 +160,7 @@ const MainColumn: React.FC = () => {
                       ))}
                   </ul>
                   <div className='view-more'>
-                    <Link></Link>
+                    <Link component={RouterLink} to={`/portfolio/p_${portfolio.id}/`}></Link>
                   </div>
                 </div>
               </li>
@@ -165,4 +171,4 @@ const MainColumn: React.FC = () => {
   );
 };
 
-export default MainColumn;
+export default TopPage;

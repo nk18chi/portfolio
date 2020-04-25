@@ -171,6 +171,61 @@ footer {
   border-radius: 8px;
 }
 
+h1 {
+  font-size: 32px;
+}
+
+.main-column {
+  width: 78%;
+  float: right;
+  background: #fff;
+}
+
+.main-column h2 {
+  font-size: 28px;
+  border-left: 4px solid $siteColor;
+  padding-left: 8px;
+}
+
+.black-btn {
+  color: $white !important;
+  background-color: $black !important;
+  text-transform: none !important;
+}
+
+.summary-description {
+  width: 60%;
+  float: left;
+}
+
+.summary-image {
+  width: 40%;
+  float: left;
+}
+
+.summary-image {
+  text-align: center;
+}
+
+.main-thumnail {
+  max-width: 75%;
+}
+
+.icon li {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.app-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
 .block {
   padding: 4% 6%;
   overflow: hidden;
