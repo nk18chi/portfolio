@@ -4,6 +4,15 @@ import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 const PortfolioPage: React.FC = () => {
   const data = {
@@ -57,6 +66,7 @@ const PortfolioPage: React.FC = () => {
   };
   return (
     <article className='main-column'>
+      <ScrollToTop />
       <section className='portfolio-summary block'>
         <div className='summary-description'>
           <h1>{data.serviceName}</h1>
