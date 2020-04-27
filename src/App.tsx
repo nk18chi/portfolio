@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <div className='container'>
-        <SideBar />
         <Router>
+          <SideBar />
           <Switch>
             <Route exact path='/portfolio/p_:portfolio_id' component={PortfolioPage} />
             <Route exact path='/portfolio' component={TopPage} />

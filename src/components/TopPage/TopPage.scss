@@ -1,42 +1,42 @@
 @import "../../Model.scss";
 
-.about-me {
+#about-me {
   overflow: hidden;
 }
 
-.about-me h3 {
+#about-me h3 {
   font-size: 23px;
   font-weight: 400;
   margin: 12px 0;
 }
 
-.skill-sets .four-elements {
+#skill-sets .four-elements {
   float: left;
   display: block;
   width: 23%;
   margin: 2% 2% 2% 0%;
 }
 
-.my-values .three-elements,
-.portfolios .three-elements {
+#my-values .three-elements,
+#portfolios .three-elements {
   width: 30%;
   float: left;
   margin: 3% 3% 3% 0;
 }
 
-.portfolios h3 {
+#portfolios h3 {
   margin-bottom: 12px;
 }
 
-.portfolios .portfolio-thumbnail {
+#portfolios .portfolio-thumbnail {
   width: 100%;
 }
 
-.portfolios .icons-ul li {
+#portfolios .icons-ul li {
   display: inline-block;
 }
 
-.portfolios .card {
+#portfolios .card {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   transition: 0.3s;
   cursor: pointer;
@@ -44,11 +44,11 @@
   position: relative;
 }
 
-.portfolios .card:hover {
+#portfolios .card:hover {
   transform: scale(1.05);
 }
 
-.portfolio-description {
+#portfolio-description {
   margin: 4%;
 }
 

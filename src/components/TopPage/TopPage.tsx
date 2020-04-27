@@ -86,7 +86,7 @@ const TopPage: React.FC = () => {
 
   return (
     <article className='main-column'>
-      <section className='about-me block'>
+      <section id='about-me' className='about-me block'>
         <div className='summary-description'>
           <h1>Naoki Mita</h1>
           <h3>Software Developer / Data Analyst</h3>
@@ -100,7 +100,7 @@ const TopPage: React.FC = () => {
         </div>
       </section>
 
-      <section className='skill-sets block'>
+      <section id='skill-sets' className='skill-sets block'>
         <h2>What I do</h2>
         <p>
           I have experiance as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skill sets and
@@ -127,7 +127,7 @@ const TopPage: React.FC = () => {
         </ul>
       </section>
 
-      <section className='my-values block'>
+      <section id='my-values' className='block'>
         <h2>My Values</h2>
         <ul>
           {myValues.length > 0 &&
@@ -140,7 +140,7 @@ const TopPage: React.FC = () => {
         </ul>
       </section>
 
-      <section className='portfolios block'>
+      <section id='portfolios' className='portfolios block'>
         <h2>PortFolios</h2>
         <ul>
           {portFolios.length > 0 &&

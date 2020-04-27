@@ -14,10 +14,10 @@ const SideBar: React.FC = () => {
   ];
 
   const menuList = [
-    { text: "About Me", icon: <Person /> },
-    { text: "Skill Sets", icon: <FolderSpecial /> },
-    { text: "My Values", icon: <Assessment /> },
-    { text: "Portfolios", icon: <LaptopMac /> },
+    { text: "About Me", icon: <Person />, anchor: "about-me" },
+    { text: "Skill Sets", icon: <FolderSpecial />, anchor: "skill-sets" },
+    { text: "My Values", icon: <Assessment />, anchor: "my-values" },
+    { text: "Portfolios", icon: <LaptopMac />, anchor: "portfolios" },
   ];
 
   return (
@@ -38,7 +38,9 @@ const SideBar: React.FC = () => {
       <Divider className='divider' />
 
       <div className='headline'>
-        <List component='nav'>{menuList.length > 0 && menuList.map((list: any) => <MenuListItem text={list.text} icon={list.icon} />)}</List>
+        <List component='nav'>
+          {menuList.length > 0 && menuList.map((list: any) => <MenuListItem text={list.text} icon={list.icon} anchor={list.anchor} />)}
+        </List>
       </div>
     </div>
   );
