@@ -8,8 +8,8 @@ import MenuListItem from "./MenuListItem";
 const SideBar: React.FC = () => {
   const iconData = [
     { url: "https://github.com/nk18chi", element: <GitHub /> },
-    { url: "", element: <LinkedIn /> },
-    { url: "", element: <Twitter /> },
+    { url: "https://www.linkedin.com/in/naoki-mita-ab186839/", element: <LinkedIn /> },
+    { url: "https://twitter.com/naokien1", element: <Twitter /> },
     { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/icon/leetcode.svg' alt='' /> },
   ];
 
