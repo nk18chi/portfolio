@@ -69,7 +69,7 @@ const TopPage: React.FC = () => {
       </section>
 
       <section id='skill-sets' className='skill-sets block'>
-        <h2>What I do</h2>
+        <h2>Skill sets</h2>
         <p>
           I have experience as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skillsets and
           technologies I use. Check out my portfolio as well.
