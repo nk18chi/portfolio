@@ -29,7 +29,7 @@ const SideBar: React.FC = () => {
       </div>
 
       <div className='social-link'>
-        <ul>{iconData.length > 0 && iconData.map((i: any) => <IconButtonLink url={i.url} icon={i.element} />)}</ul>
+        <ul>{iconData.length > 0 && iconData.map((i: any, index: number) => <IconButtonLink key={index} url={i.url} icon={i.element} />)}</ul>
       </div>
 
       <Button className='black-btn' variant='contained' size='large' startIcon={<Description />}>
@@ -39,7 +39,8 @@ const SideBar: React.FC = () => {
 
       <div className='headline'>
         <List component='nav'>
-          {menuList.length > 0 && menuList.map((list: any) => <MenuListItem text={list.text} icon={list.icon} anchor={list.anchor} />)}
+          {menuList.length > 0 &&
+            menuList.map((list: any, index: number) => <MenuListItem key={index} text={list.text} icon={list.icon} anchor={list.anchor} />)}
         </List>
       </div>
     </div>

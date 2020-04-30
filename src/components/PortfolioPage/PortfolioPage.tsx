@@ -29,8 +29,8 @@ const PortfolioPage: React.FC = (props: any) => {
           <p className='font-little-bold'>Applications</p>
           <ul className='icon'>
             {data.appIcons.length > 0 &&
-              data.appIcons.map((icon: any) => (
-                <li>
+              data.appIcons.map((icon: any, index: number) => (
+                <li key={index}>
                   <img className='app-icon' src={icon} alt='' />
                 </li>
               ))}
@@ -45,8 +45,8 @@ const PortfolioPage: React.FC = (props: any) => {
         <section className='portfolio-detail block'>
           <h2>How to use</h2>
           {data.usages.length > 0 &&
-            data.usages.map((usage: any) => (
-              <div className='portfolio--detail-container block'>
+            data.usages.map((usage: any, index: number) => (
+              <div key={index} className='portfolio--detail-container block'>
                 <h3 className='font-little-bold'>{usage.headline}</h3>
                 {usage.image && <img className='portfolio-detail-image' src={usage.image} alt='' />}
                 <p>{usage.description}</p>
@@ -60,8 +60,8 @@ const PortfolioPage: React.FC = (props: any) => {
         <section className='portfolio-detail block'>
           <h2>Feature points</h2>
           {data.features.length > 0 &&
-            data.features.map((feature: any) => (
-              <div className='portfolio--detail-container block'>
+            data.features.map((feature: any, index: number) => (
+              <div key={index} className='portfolio--detail-container block'>
                 <h3 className='font-little-bold'>{feature.headline}</h3>
                 {feature.image && <img className='portfolio-detail-image' src={feature.image} alt='' />}
                 <p>{feature.description}</p>

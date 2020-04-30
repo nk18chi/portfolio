@@ -76,13 +76,13 @@ const TopPage: React.FC = () => {
         </p>
         <ul>
           {skillSets.length > 0 &&
-            skillSets.map((skill: any) => (
-              <li className='four-elements'>
+            skillSets.map((skill: any, index: number) => (
+              <li key={index} className='four-elements'>
                 <div>
                   <ul className='icon'>
                     {skill.icons.length > 0 &&
-                      skill.icons.map((icon: any) => (
-                        <li>
+                      skill.icons.map((icon: any, index: number) => (
+                        <li key={index}>
                           <img className='app-icon' src={icon} alt='' />
                         </li>
                       ))}
@@ -99,8 +99,8 @@ const TopPage: React.FC = () => {
         <h2>My Values</h2>
         <ul>
           {myValues.length > 0 &&
-            myValues.map((value: any) => (
-              <li className='three-elements'>
+            myValues.map((value: any, index: number) => (
+              <li key={index} className='three-elements'>
                 <p className='center app-big-icon'>{value.icon}</p>
                 <h3 className='center'>{value.title}</h3>
                 <p>{value.description}</p>
@@ -114,7 +114,7 @@ const TopPage: React.FC = () => {
         <ul>
           {portfolioData.length > 0 &&
             portfolioData.map((portfolio: any) => (
-              <li className='three-elements card'>
+              <li key={portfolio.id} className='three-elements card'>
                 <img className='portfolio-thumbnail' src={portfolio.serviceThumbnail} alt='' />
                 <div className='portfolio-description'>
                   <h3>{portfolio.serviceName}</h3>
@@ -122,14 +122,16 @@ const TopPage: React.FC = () => {
                   <p className='font-little-bold'>Applications</p>
                   <ul className='icons-ul'>
                     {portfolio.appIcons.length > 0 &&
-                      portfolio.appIcons.map((icon: any) => (
-                        <li>
+                      portfolio.appIcons.map((icon: any, index: number) => (
+                        <li key={index}>
                           <img className='app-icon' src={icon} alt='' />
                         </li>
                       ))}
                   </ul>
                   <div className='view-more'>
-                    <Link component={RouterLink} to={`/portfolio/p_${portfolio.id}/`}></Link>
+                    <Link component={RouterLink} to={`/portfolio/p_${portfolio.id}/`}>
+                      view more
+                    </Link>
                   </div>
                 </div>
               </li>
