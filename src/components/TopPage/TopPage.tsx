@@ -2,85 +2,53 @@ import React from "react";
 import "./TopPage.scss";
 import { Link as RouterLink } from "react-router-dom";
 import Link from "@material-ui/core/Link";
+import { Favorite, FindReplace, Group } from "@material-ui/icons";
+import { portfolioData } from "../../data/portfolio";
 
 const TopPage: React.FC = () => {
   const skillSets = [
     {
       title: "Typescript & React",
       description:
-        "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers.",
-      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
+        "I have experience in building a React app with Firebase. I am familiar with React Hooks. I can program by Javascript but I prefer typescript to javascript. It helps me to make apps safe and find the bug easily.",
+      icons: ["/portfolio/img/icon/typescript.svg", "/portfolio/img/icon/react.svg"],
     },
     {
       title: "Python & Django",
       description:
-        "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers.",
-      icons: ["/portfolio/img/python.svg", "/portfolio/img/django.svg"],
+        "I have experience in publishing some apps that are developed by Django and MySQL. Also, I can make use of Rest API to handle data from the database and write test cases by fixtures and factory-boy.",
+      icons: ["/portfolio/img/icon/python.svg", "/portfolio/img/icon/django.svg"],
     },
     {
       title: "Data Analysis",
       description:
-        "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers.",
-      icons: ["/portfolio/img/google-analytics.svg", "/portfolio/img/google-big-query.png", "/portfolio/img/sql.svg"],
+        "I know how to get data from google analytics by Python(via API) or BigQuery and data from the database by SQL. I can analyze how users use your product by investigating those data and come up with a new strategy.",
+      icons: ["/portfolio/img/icon/google-analytics.svg", "/portfolio/img/icon/google-big-query.png", "/portfolio/img/icon/sql.svg"],
     },
     {
       title: "Mobile Apps",
       description:
-        "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers.",
-      icons: ["/portfolio/img/apple.svg", "/portfolio/img/android.svg"],
+        "The experience in building web apps is bigger than one in mobile apps but I have knowledge of mobile apps as well and I am able to simple apps in iOS(Swift) and Android(Kotlin).",
+      icons: ["/portfolio/img/icon/apple.svg", "/portfolio/img/icon/android.svg"],
     },
   ];
 
   const myValues = [
     {
-      title: "Stay Curious",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icon: <Favorite />,
+      title: "Passion for building apps",
+      description: "I love building apps and thinking about how make users comfortable. I never stop learning and building the app even free time.",
     },
     {
-      title: "Stay Curious",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
+      icon: <FindReplace />,
+      title: "Think efficiently",
+      description: "I always keep looking for the way to reduce time. I love automation and effective-algorithm.",
     },
     {
-      title: "Stay Curious",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-    },
-  ];
-
-  const portFolios = [
-    {
-      id: 1,
-      image: "/portfolio/img/sample.jpg",
-      serviceName: "My Portfolio",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg", "/portfolio/img/firebase.svg"],
-    },
-    {
-      id: 2,
-      image: "/portfolio/img/sample.jpg",
-      serviceName: "My Portfolio",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-      icons: ["/portfolio/img/python.svg", "/portfolio/img/django.svg", "/portfolio/img/mysql.svg", "/portfolio/img/centos.svg"],
-    },
-    {
-      id: 3,
-      image: "/portfolio/img/sample.jpg",
-      serviceName: "My Portfolio",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
-    },
-    {
-      id: 4,
-      image: "/portfolio/img/sample.jpg",
-      serviceName: "My Portfolio",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
-    },
-    {
-      id: 5,
-      image: "/portfolio/img/sample.jpg",
-      serviceName: "My Portfolio",
-      description: "The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language.",
-      icons: ["/portfolio/img/typescript.svg", "/portfolio/img/react.svg"],
+      icon: <Group />,
+      title: "Work together well",
+      description:
+        "I can smoothly work with a team from other departments because I have knowledge of not only building apps but also analysis and marketing, design etc.",
     },
   ];
 
@@ -91,8 +59,8 @@ const TopPage: React.FC = () => {
           <h1>Naoki Mita</h1>
           <h3>Software Developer / Data Analyst</h3>
           <p>
-            I am a software developer specialised in frontend and backend development for web apps. Also, I have experimence of being a data analyst.
-            I believe I can help you to grow up your products in every aspects. Check out my portfolio and online resume.
+            I am a software developer specialized in frontend and backend development for web apps. Also, I have experience of being a data analyst. I
+            believe I can help you to grow up your products in every aspect. Check out my portfolio and online resume.
           </p>
         </div>
         <div className='summary-image'>
@@ -103,7 +71,7 @@ const TopPage: React.FC = () => {
       <section id='skill-sets' className='skill-sets block'>
         <h2>What I do</h2>
         <p>
-          I have experiance as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skill sets and
+          I have experience as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skillsets and
           technologies I use. Check out my portfolio as well.
         </p>
         <ul>
@@ -133,7 +101,8 @@ const TopPage: React.FC = () => {
           {myValues.length > 0 &&
             myValues.map((value: any) => (
               <li className='three-elements'>
-                <h3>{value.title}</h3>
+                <p className='center app-big-icon'>{value.icon}</p>
+                <h3 className='center'>{value.title}</h3>
                 <p>{value.description}</p>
               </li>
             ))}
@@ -143,19 +112,19 @@ const TopPage: React.FC = () => {
       <section id='portfolios' className='portfolios block'>
         <h2>PortFolios</h2>
         <ul>
-          {portFolios.length > 0 &&
-            portFolios.map((portfolio: any) => (
+          {portfolioData.length > 0 &&
+            portfolioData.map((portfolio: any) => (
               <li className='three-elements card'>
-                <img className='portfolio-thumbnail' src={portfolio.image} alt='' />
+                <img className='portfolio-thumbnail' src={portfolio.serviceThumbnail} alt='' />
                 <div className='portfolio-description'>
                   <h3>{portfolio.serviceName}</h3>
-                  <p>{portfolio.description}</p>
+                  <p>{portfolio.serviceDescription}</p>
                   <p className='font-little-bold'>Applications</p>
                   <ul className='icons-ul'>
-                    {portfolio.icons.length > 0 &&
-                      portfolio.icons.map((path: any) => (
+                    {portfolio.appIcons.length > 0 &&
+                      portfolio.appIcons.map((icon: any) => (
                         <li>
-                          <img className='app-icon' src={path} alt='' />
+                          <img className='app-icon' src={icon} alt='' />
                         </li>
                       ))}
                   </ul>

@@ -10,7 +10,7 @@ const SideBar: React.FC = () => {
     { url: "https://github.com/nk18chi", element: <GitHub /> },
     { url: "", element: <LinkedIn /> },
     { url: "", element: <Twitter /> },
-    { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/leetcode.svg' alt='' /> },
+    { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/icon/leetcode.svg' alt='' /> },
   ];
 
   const menuList = [

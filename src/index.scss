@@ -179,6 +179,7 @@ h1 {
   width: 78%;
   float: right;
   background: #fff;
+  min-height: 750px;
 }
 
 .main-column h2 {
@@ -229,6 +230,10 @@ h1 {
 .block {
   padding: 4% 6%;
   overflow: hidden;
+}
+
+.center {
+  text-align: center;
 }
 
 .font-little-bold {
