@@ -239,3 +239,18 @@ h1 {
 .font-little-bold {
   font-weight: 600;
 }
+
+@media screen and (max-width: 781px) {
+  .main-column {
+    width: 100%;
+  }
+
+  .summary-description,
+  .summary-image {
+    width: 100%;
+  }
+
+  .block {
+    padding: 10% 3%;
+  }
+}

@@ -37,3 +37,9 @@
 .google-play-badge {
   width: 200px;
 }
+
+@media screen and (max-width: 781px) {
+  .portfolio-links li {
+    width: 100%;
+  }
+}

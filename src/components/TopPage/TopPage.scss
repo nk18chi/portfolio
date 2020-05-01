@@ -72,3 +72,11 @@
   pointer-events: auto;
   content: "";
 }
+
+@media screen and (max-width: 781px) {
+  #skill-sets .four-elements,
+  #my-values .three-elements,
+  #portfolios .three-elements {
+    width: 100%;
+  }
+}
