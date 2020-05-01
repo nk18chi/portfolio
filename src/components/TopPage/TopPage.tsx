@@ -6,6 +6,7 @@ import { Favorite, FindReplace, Group } from "@material-ui/icons";
 import { portfolioData } from "../../data/portfolio";
 
 const TopPage: React.FC = () => {
+  document.title = "Naoki Mita - portfolio, online resume";
   const skillSets = [
     {
       title: "Typescript & React",

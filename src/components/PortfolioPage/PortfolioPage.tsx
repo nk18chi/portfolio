@@ -18,6 +18,7 @@ function ScrollToTop() {
 const PortfolioPage: React.FC = (props: any) => {
   const portfolioId = props.match.params.portfolio_id;
   const data: any = portfolioData.find((data: any) => data.id === Number(portfolioId))!;
+  document.title = `${data.serviceName} by Naoki Mita`;
 
   return (
     <article className='main-column'>
