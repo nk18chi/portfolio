@@ -32,7 +32,13 @@ const SideBar: React.FC = () => {
         <ul>{iconData.length > 0 && iconData.map((i: any, index: number) => <IconButtonLink key={index} url={i.url} icon={i.element} />)}</ul>
       </div>
 
-      <Button className='black-btn' variant='contained' size='large' startIcon={<Description />}>
+      <Button
+        href='https://docs.google.com/document/d/1GVcJ-RGKe2-6iPmtFZniVHD4ZNM1zV9tcE2bVAeZGpU/edit'
+        className='black-btn'
+        variant='contained'
+        size='large'
+        startIcon={<Description />}
+      >
         View Resume
       </Button>
       <Divider className='divider' />
