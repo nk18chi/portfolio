@@ -9,7 +9,7 @@ const SideBar: React.FC = () => {
     { text: "About Me", icon: <Person />, anchor: "about-me" },
     { text: "Skill Sets", icon: <FolderSpecial />, anchor: "skill-sets" },
     { text: "My Values", icon: <Assessment />, anchor: "my-values" },
-    { text: "Portfolios", icon: <LaptopMac />, anchor: "portfolios" },
+    { text: "Private Projects", icon: <LaptopMac />, anchor: "privateProjects" },
   ];
 
   return (

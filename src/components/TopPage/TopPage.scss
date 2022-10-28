@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   h3 {
-    font-size: 23px;
     font-weight: 400;
     margin: 12px 0;
   }
@@ -17,7 +16,7 @@
   flex-direction: row;
 }
 
-#skill-sets ul, #my-values ul, #portfolios ul {
+#skill-sets ul, #my-values ul, #privateProjects ul {
   display: flex;
 }
 
@@ -32,60 +31,27 @@
   height: 40px;
 }
 
-#my-values .three-elements,
-#portfolios .three-elements {
+#my-values .three-elements {
   width: 30%;
   margin: 3% 3% 3% 0;
 }
 
-#portfolios h3 {
-  margin-bottom: 12px;
-}
-
-#portfolios .portfolio-thumbnail {
-  width: 100%;
-}
-
-#portfolios .icons-ul li {
-  display: inline-block;
-}
-
-#portfolios .card {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  transition: 0.3s;
-  cursor: pointer;
-  border-radius: 5px;
-  position: relative;
-}
-
-#portfolios .card:hover {
-  transform: scale(1.05);
-}
-
-.portfolio-description {
-  margin: 4%;
-}
-
-.view-more {
-  text-align: right;
-  padding: 12px 12px 4px 12px;
-}
-
-.view-more a:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  pointer-events: auto;
-  content: "";
+#privateProjects {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px
+  }
+  .privateProject-container {
+    width: 49%;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 781px) {
   #skill-sets .four-elements,
   #my-values .three-elements,
-  #portfolios .three-elements {
+  #privateProjects .three-elements {
     width: 100%;
   }
 
@@ -96,15 +62,19 @@
 
   #externalLinks {
     gap: 0px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
   }
 
-  #skill-sets ul, #my-values ul, #portfolios ul {
+  #skill-sets ul, #my-values ul, #privateProjects ul {
     flex-direction: column;
   }
 
-  #skill-sets ul.icon, #portfolios .portfolio-description .icons-ul {
+  #skill-sets ul.icon, #privateProjects .privateProject-description .icons-ul {
     flex-direction: row;
+  }
+
+  #privateProjects .privateProject-container {
+    width: 100%;
   }
 }

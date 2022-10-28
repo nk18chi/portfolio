@@ -170,7 +170,18 @@ footer {
 }
 
 h1 {
+  font-size: 36px;
+}
+
+h2 {
   font-size: 32px;
+  border-left: 4px solid $siteColor;
+  padding-left: 8px;
+}
+
+h3 {
+  margin-top: 16px;
+  font-size: 26px;
 }
 
 .main-column {
@@ -183,12 +194,6 @@ h1 {
   padding-bottom: $frameSpace;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  h2 {
-    font-size: 28px;
-    border-left: 4px solid $siteColor;
-    padding-left: 8px;
-  }
 }
 
 .main-column::-webkit-scrollbar {

@@ -3,7 +3,6 @@ import "./index.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SideBar from "./components/SideBar/SideBar";
 import TopPage from "./components/TopPage/TopPage";
-import PortfolioPage from "./components/PortfolioPage/PortfolioPage";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
         <Router>
           <SideBar />
           <Switch>
-            <Route exact path='/portfolio/p_:portfolio_id' component={PortfolioPage} />
+            <Route exact path='/' component={TopPage} />
             <Route exact path='/portfolio' component={TopPage} />
           </Switch>
         </Router>

@@ -1,9 +1,9 @@
 import React from "react";
 import "./TopPage.scss";
-import { Link as RouterLink } from "react-router-dom";
-import { Link, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { Favorite, FindReplace, Group, GitHub, LinkedIn, Twitter, Description } from "@material-ui/icons";
-import { portfolioData } from "../../data/portfolio";
+import LinkIcon from "@material-ui/icons/Link";
+import { privateProjectData } from "../../data/privateProject";
 import IconButtonLink from "./IconButtonLink";
 
 const iconData = [
@@ -59,7 +59,7 @@ const myValues = [
 ];
 
 const TopPage: React.FC = () => {
-  document.title = "Naoki Mita - portfolio, online resume";
+  document.title = "Naoki Mita - privateProject, online resume";
   return (
     <article className='main-column'>
       <section id='about-me' className='about-me block'>
@@ -68,7 +68,7 @@ const TopPage: React.FC = () => {
           <h3>Software Developer / Data Analyst</h3>
           <p>
             I am a software developer specialized in frontend and backend development for web apps. Also, I have experience of being a data analyst. I
-            believe I can help you to grow up your products in every aspect. Check out my portfolio and online resume.
+            believe I can help you to grow up your products in every aspect. Check out my privateProject and online resume.
           </p>
           <div id='externalLinks'>
             <Button
@@ -94,7 +94,7 @@ const TopPage: React.FC = () => {
         <h2>Skill sets</h2>
         <p>
           I have experience as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skillsets and
-          technologies I use. Check out my portfolio as well.
+          technologies I use. Check out my privateProject as well.
         </p>
         <ul>
           {skillSets.length > 0 &&
@@ -131,29 +131,19 @@ const TopPage: React.FC = () => {
         </ul>
       </section>
 
-      <section id='portfolios' className='portfolios block'>
-        <h2>PortFolios</h2>
+      <section id='privateProjects' className='privateProjects block'>
+        <h2>Private Projects</h2>
         <ul>
-          {portfolioData.length > 0 &&
-            portfolioData.map((portfolio: any) => (
-              <li key={portfolio.id} className='three-elements card'>
-                <img className='portfolio-thumbnail' src={portfolio.serviceThumbnail} alt='' />
-                <div className='portfolio-description'>
-                  <h3>{portfolio.serviceName}</h3>
-                  <p>{portfolio.serviceDescription}</p>
-                  <p className='font-little-bold'>Applications</p>
-                  <ul className='icons-ul'>
-                    {portfolio.appIcons.length > 0 &&
-                      portfolio.appIcons.map((icon: any, index: number) => (
-                        <li key={index}>
-                          <img className='app-icon' src={icon} alt='' />
-                        </li>
-                      ))}
-                  </ul>
-                  <div className='view-more'>
-                    <Link component={RouterLink} to={`/portfolio/p_${portfolio.id}/`}>
-                      view more
-                    </Link>
+          {privateProjectData.length > 0 &&
+            privateProjectData.map((privateProject) => (
+              <li key={privateProject.id} className='privateProject-container'>
+                <div className='privateProject-description'>
+                  <h3>{privateProject.serviceName}</h3>
+                  <p>{privateProject.serviceDescription}</p>
+                  <p className='tool-list'>Tools: {privateProject.tools.length > 0 && privateProject.tools.map((tool) => tool).join(", ")}</p>
+                  <div className='icon'>
+                    {privateProject.githubUrl && <IconButtonLink url={privateProject.githubUrl} icon={<GitHub />} />}
+                    {privateProject.website && <IconButtonLink url={privateProject.website} icon={<LinkIcon />} />}
                   </div>
                 </div>
               </li>
