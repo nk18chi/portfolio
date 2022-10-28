@@ -13,14 +13,14 @@ const SideBar: React.FC = () => {
   ];
 
   return (
-    <div className='side-bar'>
+    <aside className='side-bar'>
       <div className='headline'>
         <List component='nav'>
           {menuList.length > 0 &&
             menuList.map((list: any, index: number) => <MenuListItem key={index} text={list.text} icon={list.icon} anchor={list.anchor} />)}
         </List>
       </div>
-    </div>
+    </aside>
   );
 };
 

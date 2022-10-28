@@ -70,18 +70,20 @@ const TopPage: React.FC = () => {
             I am a software developer specialized in frontend and backend development for web apps. Also, I have experience of being a data analyst. I
             believe I can help you to grow up your products in every aspect. Check out my portfolio and online resume.
           </p>
-          <div className='social-link'>
-            <ul>{iconData.length > 0 && iconData.map((i: any, index: number) => <IconButtonLink key={index} url={i.url} icon={i.element} />)}</ul>
+          <div id='externalLinks'>
+            <Button
+              href='https://docs.google.com/document/d/1GVcJ-RGKe2-6iPmtFZniVHD4ZNM1zV9tcE2bVAeZGpU/edit'
+              className='black-btn'
+              variant='contained'
+              size='large'
+              startIcon={<Description />}
+            >
+              View Resume
+            </Button>
+            <div className='social-link'>
+              <ul>{iconData.length > 0 && iconData.map((i: any, index: number) => <IconButtonLink key={index} url={i.url} icon={i.element} />)}</ul>
+            </div>
           </div>
-          <Button
-            href='https://docs.google.com/document/d/1GVcJ-RGKe2-6iPmtFZniVHD4ZNM1zV9tcE2bVAeZGpU/edit'
-            className='black-btn'
-            variant='contained'
-            size='large'
-            startIcon={<Description />}
-          >
-            View Resume
-          </Button>
         </div>
         <div className='summary-image'>
           <img className='main-thumnail' src='/portfolio/img/about_me.jpg' alt='' />
