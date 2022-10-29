@@ -28,7 +28,7 @@ export const privateProjectData: TprivateProjectData[] = [
     id: 3,
     serviceName: "Pelican",
     serviceDescription:
-      "Pelican is an e-commerce application that offers cell phone purchases with data plan and charge monthly sucbscription by using Stripe.",
+      "Pelican is an e-commerce application that sells cellular phones with data plans and charges monthly sucbscriptions using Stripe.",
     tools: [
       "React",
       "Next.js",

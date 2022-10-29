@@ -5,6 +5,8 @@ import { Favorite, FindReplace, Group, GitHub, LinkedIn, Twitter, Description } 
 import LinkIcon from "@material-ui/icons/Link";
 import { privateProjectData } from "../../data/privateProject";
 import IconButtonLink from "./IconButtonLink";
+import { EXPERIENCES } from "../../data/experiences";
+import { calcDiffDate, formatDate } from "../../utils/common";
 
 const iconData = [
   { url: "https://github.com/nk18chi", element: <GitHub /> },
@@ -88,6 +90,33 @@ const TopPage: React.FC = () => {
         <div className='summary-image'>
           <img className='main-thumnail' src='/portfolio/img/about_me.jpg' alt='' />
         </div>
+      </section>
+
+      <section id='experiences-container' className='block'>
+        <h2>Experiences</h2>
+        {EXPERIENCES.map((exp) => {
+          const diff = calcDiffDate(exp.startDate, exp.endDate || new Date());
+          return (
+            <div key={exp.id} className='experience'>
+              <div className='experience-headline'>
+                <h3>{exp.job.title}</h3>
+                <p>
+                  {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : "Present"} /{" "}
+                  {diff.year === 0 ? "" : diff.year > 1 ? `${diff.year} years` : `${diff.year} year`}{" "}
+                  {diff.month === 0 ? "" : diff.month > 1 ? `${diff.month} months` : `${diff.month} month`}
+                </p>
+              </div>
+              <p className='company-name'>{exp.company.name}</p>
+              <p>{exp.company.description}</p>
+              <ul className='job-contents'>
+                {exp.job.contents.map((c) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
+              <p>Tech Stack: {exp.tools.map((tool) => tool).join(", ")}</p>
+            </div>
+          );
+        })}
       </section>
 
       <section id='skill-sets' className='skill-sets block'>
