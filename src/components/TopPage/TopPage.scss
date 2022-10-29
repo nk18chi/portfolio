@@ -82,6 +82,23 @@
   }
 }
 
+#skill-sets {
+  h2 {
+    margin-bottom: 36px;
+  }
+  #skill-set-conainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    .skill-set {
+      width: 260px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
 @media screen and (max-width: 781px) {
   #skill-sets .four-elements,
   #my-values .three-elements,

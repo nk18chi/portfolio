@@ -14,31 +14,38 @@ const iconData = [
   { url: "https://twitter.com/naokien1", element: <Twitter /> },
   { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/icon/leetcode.svg' alt='' /> },
 ];
-const skillSets = [
-  {
-    title: "Typescript & React",
-    description:
-      "I have experience in building a React app with Firebase. I am familiar with React Hooks. I can program by Javascript but I prefer typescript to javascript. It helps me to make apps safe and find the bug easily.",
-    icons: ["/portfolio/img/icon/typescript.svg", "/portfolio/img/icon/react.svg"],
-  },
-  {
-    title: "Python & Django",
-    description:
-      "I have experience in publishing some apps that are developed by Django and MySQL. Also, I can make use of Rest API to handle data from the database and write test cases by fixtures and factory-boy.",
-    icons: ["/portfolio/img/icon/python.svg", "/portfolio/img/icon/django.svg"],
-  },
-  {
-    title: "Data Analysis",
-    description:
-      "I know how to get data from google analytics by Python(via API) or BigQuery and data from the database by SQL. I can analyze how users use your product by investigating those data and come up with a new strategy.",
-    icons: ["/portfolio/img/icon/google-analytics.svg", "/portfolio/img/icon/google-big-query.png", "/portfolio/img/icon/sql.svg"],
-  },
-  {
-    title: "Mobile Apps",
-    description:
-      "The experience in building web apps is bigger than one in mobile apps but I have knowledge of mobile apps as well and I am able to simple apps in iOS(Swift) and Android(Kotlin).",
-    icons: ["/portfolio/img/icon/apple.svg", "/portfolio/img/icon/android.svg"],
-  },
+
+type TSkillset = {
+  label: string;
+  icon: string;
+};
+const skillSets: TSkillset[] = [
+  { label: "Javascript", icon: "/portfolio/img/icon/javascript.svg" },
+  { label: "Typescript", icon: "/portfolio/img/icon/typescript.svg" },
+  { label: "Python", icon: "/portfolio/img/icon/python.svg" },
+  { label: "React", icon: "/portfolio/img/icon/react.svg" },
+  { label: "Node", icon: "/portfolio/img/icon/node.svg" },
+  { label: "Express", icon: "/portfolio/img/icon/express.svg" },
+  { label: "Mongo DB", icon: "/portfolio/img/icon/mongodb.svg" },
+  { label: "Next.js", icon: "/portfolio/img/icon/nextjs.svg" },
+  { label: "ElasticSearch", icon: "/portfolio/img/icon/elasticsearch.svg" },
+  { label: "Firebase", icon: "/portfolio/img/icon/firebase.svg" },
+  { label: "AWS", icon: "/portfolio/img/icon/aws.svg" },
+  { label: "Django", icon: "/portfolio/img/icon/django.svg" },
+  { label: "MySQL", icon: "/portfolio/img/icon/mysql.svg" },
+  { label: "WordPress", icon: "/portfolio/img/icon/wordpress.svg" },
+  { label: "Docker", icon: "/portfolio/img/icon/docker.svg" },
+  { label: "HTML", icon: "/portfolio/img/icon/html.svg" },
+  { label: "CSS", icon: "/portfolio/img/icon/css.svg" },
+  { label: "SASS", icon: "/portfolio/img/icon/sass.svg" },
+  { label: "GitHub Actions", icon: "/portfolio/img/icon/github.svg" },
+  { label: "Circle CI", icon: "/portfolio/img/icon/circle-ci.svg" },
+  { label: "Jest", icon: "/portfolio/img/icon/jest.svg" },
+  { label: "React Testing Library", icon: "/portfolio/img/icon/rtl.svg" },
+  { label: "Cypress", icon: "/portfolio/img/icon/cypress.svg" },
+  { label: "StoryBook", icon: "/portfolio/img/icon/storybook.svg" },
+  { label: "Stripe API", icon: "/portfolio/img/icon/stripe.svg" },
+  { label: "Salesforce Commerce API", icon: "/portfolio/img/icon/salesforce.svg" },
 ];
 
 const myValues = [
@@ -120,30 +127,16 @@ const TopPage: React.FC = () => {
       </section>
 
       <section id='skill-sets' className='skill-sets block'>
-        <h2>Skill sets</h2>
-        <p>
-          I have experience as a software developer and a data analyst for clients in Japan. Below is a quick overview of my technical skillsets and
-          technologies I use. Check out my privateProject as well.
-        </p>
-        <ul>
+        <h2>Skill Sets</h2>
+        <div id='skill-set-conainer'>
           {skillSets.length > 0 &&
-            skillSets.map((skill: any, index: number) => (
-              <li key={index} className='four-elements'>
-                <div>
-                  <ul className='icon'>
-                    {skill.icons.length > 0 &&
-                      skill.icons.map((icon: any, index: number) => (
-                        <li key={index}>
-                          <img className='app-icon' src={icon} alt='' />
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-                <h3>{skill.title}</h3>
-                <p>{skill.description}</p>
-              </li>
+            skillSets.map((skill, index: number) => (
+              <div key={index} className='skill-set'>
+                <img className='app-icon' src={skill.icon} alt='' />
+                {skill.label}
+              </div>
             ))}
-        </ul>
+        </div>
       </section>
 
       <section id='my-values' className='block'>
