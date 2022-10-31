@@ -3,7 +3,7 @@ import "./TopPage.scss";
 import { Button } from "@material-ui/core";
 import { Build, Group, GitHub, LinkedIn, Twitter, Description, RateReview, DoneAll } from "@material-ui/icons";
 import LinkIcon from "@material-ui/icons/Link";
-import { privateProjectData } from "../../data/privateProject";
+import { PRIVATE_PROJECTS } from "../../data/privateProject";
 import IconButtonLink from "./IconButtonLink";
 import { EXPERIENCES } from "../../data/experiences";
 import { calcDiffDate, formatDate } from "../../utils/common";
@@ -94,7 +94,7 @@ const favorites: TFavarites[] = [
 
 const myValues = [
   {
-    icon: <Build className='color-gray' />,
+    icon: <Build className='color-green' />,
     title: "Passion for making code clean",
     description:
       "As a developer, you must spend much more time to read code than write it. So, I believe it is more important to think of how other developers will understand my code than how I like to construct it.",
@@ -106,13 +106,13 @@ const myValues = [
       "Having test code makes the code understandable, and other developers are not afraid of changing your code without breaking existing functionalities.",
   },
   {
-    icon: <RateReview className='color-lightblue' />,
+    icon: <RateReview className='color-green' />,
     title: "Love to review code and be reviewed",
     description:
       "I would like to know how other developers think of my code and how they write code. It is a great chance of learning new from others!",
   },
   {
-    icon: <Group className='color-lightseagreen' />,
+    icon: <Group className='color-green' />,
     title: "Working as team takes you go further",
     description:
       "I believe you can achieve more and get your goal faster than you do alone. The great communication is built by the atmosphere that everyone can feel free to ask anything with good manners.",
@@ -153,10 +153,10 @@ const TopPage: React.FC = () => {
 
       <section id='experiences-container' className='block'>
         <h2>Experiences</h2>
-        {EXPERIENCES.map((exp) => {
+        {EXPERIENCES.map((exp, i) => {
           const diff = calcDiffDate(exp.startDate, exp.endDate || new Date());
           return (
-            <div key={exp.id} className='experience'>
+            <div key={exp.id} id={`experience-${i}`} className='experience'>
               <div className='experience-headline'>
                 <h3>{exp.job.title}</h3>
                 <p>
@@ -208,7 +208,7 @@ const TopPage: React.FC = () => {
       </section>
 
       <section id='my-favorites' className='block'>
-        <h2>Faves</h2>
+        <h2>Favorites</h2>
         <div id='my-favorites-container'>
           {favorites.length > 0 &&
             favorites.map((favorite, i: number) => (
@@ -231,9 +231,9 @@ const TopPage: React.FC = () => {
       <section id='privateProjects' className='privateProjects block'>
         <h2>Private Projects</h2>
         <ul>
-          {privateProjectData.length > 0 &&
-            privateProjectData.map((privateProject) => (
-              <li key={privateProject.id} className='privateProject-container'>
+          {PRIVATE_PROJECTS.length > 0 &&
+            PRIVATE_PROJECTS.map((privateProject, i) => (
+              <li key={privateProject.id} id={`privateProject-${i}`} className='privateProject-container'>
                 <div className='privateProject-description'>
                   <h3>{privateProject.serviceName}</h3>
                   <p>{privateProject.serviceDescription}</p>

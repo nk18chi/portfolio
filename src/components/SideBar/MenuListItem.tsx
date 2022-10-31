@@ -3,12 +3,12 @@ import "./MenuListItem.scss";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core/";
 import { HashLink } from "react-router-hash-link";
 
-const MenuListItem: React.FC<any | null> = ({ text, icon, anchor }) => {
+const MenuListItem: React.FC<any | null> = ({ text, icon, anchor, children }) => {
   return (
-    <HashLink className="headline-link" to={`/portfolio#${anchor}`}>
+    <HashLink className='headline-link' to={`#${anchor}`}>
       <ListItem button className='headline-list-item'>
-        <ListItemIcon className='headline-icon'>{icon}</ListItemIcon>
-        <ListItemText className='headline-text' primary={text} />
+        {icon && <ListItemIcon className='headline-icon'>{icon}</ListItemIcon>}
+        <ListItemText className='headline-text' primary={`- ${text}`} />
       </ListItem>
     </HashLink>
   );

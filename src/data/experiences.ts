@@ -16,7 +16,7 @@ type TExperience = {
 
 export const EXPERIENCES: TExperience[] = [
   {
-    id: 1,
+    id: 0,
     job: {
       title: "Full Stack Developer",
       contents: [
@@ -57,7 +57,7 @@ export const EXPERIENCES: TExperience[] = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     job: {
       title: "Software Developer",
       contents: [
@@ -77,7 +77,7 @@ export const EXPERIENCES: TExperience[] = [
     tools: ["Typescript", "React", "Firebase", "SASS"],
   },
   {
-    id: 3,
+    id: 2,
     job: {
       title: "Product Manager/Data Analyst Manager",
       contents: [
@@ -99,7 +99,7 @@ export const EXPERIENCES: TExperience[] = [
     tools: ["Python", "BigQuery", "Javascript", "SQL", "pandas", "App Scripts", "Google Analytics API", "Google Adwords API", "SEO", "Adwords"],
   },
   {
-    id: 4,
+    id: 3,
     job: {
       title: "Product Manager",
       contents: [
