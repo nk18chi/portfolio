@@ -1,55 +1,58 @@
 import React from "react";
 import "./SideBar.scss";
-import { Button, List, Divider } from "@material-ui/core/";
-import { GitHub, LinkedIn, Twitter, Person, FolderSpecial, Assessment, LaptopMac, Description } from "@material-ui/icons/";
-import IconButtonLink from "./IconButtonLink";
+import { List } from "@material-ui/core/";
+import { Person, FolderSpecial, Assessment, LaptopMac } from "@material-ui/icons/";
 import MenuListItem from "./MenuListItem";
+import { EXPERIENCES } from "../../data/experiences";
+import { PRIVATE_PROJECTS } from "../../data/privateProject";
+import BaseTimeline from "./BaseTimeline";
 
 const SideBar: React.FC = () => {
-  const iconData = [
-    { url: "https://github.com/nk18chi", element: <GitHub /> },
-    { url: "https://www.linkedin.com/in/naoki-mita-ab186839/", element: <LinkedIn /> },
-    { url: "https://twitter.com/naokien1", element: <Twitter /> },
-    { url: "https://leetcode.com/nk18chi/", element: <img src='/portfolio/img/icon/leetcode.svg' alt='' /> },
-  ];
-
   const menuList = [
-    { text: "About Me", icon: <Person />, anchor: "about-me" },
+    {
+      text: "About Me",
+      icon: <Person />,
+      anchor: "about-me",
+    },
+    {
+      text: "Experiences",
+      icon: <Person />,
+      anchor: "experiences-container",
+      timeline: EXPERIENCES.map((exp) => ({
+        id: exp.id,
+        label: exp.company.name,
+        anchor: `#experience-${exp.id}`,
+      })),
+    },
     { text: "Skill Sets", icon: <FolderSpecial />, anchor: "skill-sets" },
     { text: "My Values", icon: <Assessment />, anchor: "my-values" },
-    { text: "Portfolios", icon: <LaptopMac />, anchor: "portfolios" },
+    { text: "Favorites", icon: <Assessment />, anchor: "my-favorites" },
+    {
+      text: "Private Projects",
+      icon: <LaptopMac />,
+      anchor: "privateProjects",
+      timeline: PRIVATE_PROJECTS.map((project) => ({
+        id: project.id,
+        label: project.serviceName,
+        anchor: `#privateProject-${project.id}`,
+      })),
+    },
   ];
 
   return (
-    <div className='side-bar'>
-      <div className='profile'>
-        <h2>Naoki Mita</h2>
-        <img src='/portfolio/img/main.jpg' alt='' />
-        <p>Hello, my name is Naoki Mita. I am a software developer. Take a look at my personal page!</p>
-      </div>
-
-      <div className='social-link'>
-        <ul>{iconData.length > 0 && iconData.map((i: any, index: number) => <IconButtonLink key={index} url={i.url} icon={i.element} />)}</ul>
-      </div>
-
-      <Button
-        href='https://docs.google.com/document/d/1GVcJ-RGKe2-6iPmtFZniVHD4ZNM1zV9tcE2bVAeZGpU/edit'
-        className='black-btn'
-        variant='contained'
-        size='large'
-        startIcon={<Description />}
-      >
-        View Resume
-      </Button>
-      <Divider className='divider' />
-
+    <aside className='side-bar'>
       <div className='headline'>
         <List component='nav'>
           {menuList.length > 0 &&
-            menuList.map((list: any, index: number) => <MenuListItem key={index} text={list.text} icon={list.icon} anchor={list.anchor} />)}
+            menuList.map((list: any, index: number) => (
+              <>
+                <MenuListItem key={index} text={list.text} anchor={list.anchor} />
+                <BaseTimeline lines={list.timeline} />
+              </>
+            ))}
         </List>
       </div>
-    </div>
+    </aside>
   );
 };
 

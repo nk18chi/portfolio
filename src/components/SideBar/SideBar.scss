@@ -1,12 +1,19 @@
 @import "../../Model.scss";
 
 .side-bar {
-  width: 20%;
-  float: left;
+  width: 15%;
   color: $white;
-  text-align: center;
   padding: 12px 1%;
+  background-color: $siteColor;
+  height: 100vh;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: sticky;
+  top: 0;
+  margin-top: $frameSpace;
+  overflow: scroll;
 }
+
 .side-bar .divider {
   margin: 24px 0 8px !important;
 }
@@ -32,6 +39,6 @@
 
 @media screen and (max-width: 781px) {
   .side-bar {
-    width: 100%;
+    display: none;
   }
 }

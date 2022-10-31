@@ -154,7 +154,6 @@ p {
 
 #root {
   background-color: #ececec;
-  overflow: hidden;
 }
 
 footer {
@@ -164,28 +163,41 @@ footer {
 }
 
 .container {
-  overflow: hidden;
-  margin: 24px;
-  background-color: $siteColor;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+  display: flex;
+  width: calc(100% - (#{$frameSpace} * 2 ) );
+  margin: auto;
+  margin-bottom: $frameSpace;
 }
 
 h1 {
+  font-size: 36px;
+}
+
+h2 {
   font-size: 32px;
+  border-left: 4px solid $siteColor;
+  padding-left: 8px;
+}
+
+h3 {
+  margin-top: 16px;
+  font-size: 26px;
 }
 
 .main-column {
-  width: 78%;
-  float: right;
+  width: 83%;
   background: #fff;
-  min-height: 750px;
+  height: calc(100vh + #{$frameSpace});
+  overflow: scroll;
+  position: relative;
+  top: $frameSpace;
+  padding-bottom: $frameSpace;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.main-column h2 {
-  font-size: 28px;
-  border-left: 4px solid $siteColor;
-  padding-left: 8px;
+.main-column::-webkit-scrollbar {
+  display: none;
 }
 
 .black-btn {
@@ -196,12 +208,10 @@ h1 {
 
 .summary-description {
   width: 60%;
-  float: left;
 }
 
 .summary-image {
   width: 40%;
-  float: left;
 }
 
 .summary-image {
@@ -212,13 +222,13 @@ h1 {
   max-width: 75%;
 }
 
-.icon li {
-  display: inline-block;
-}
-
 .icon {
   display: inline-block;
   margin-bottom: 8px;
+
+  li {
+    display: inline-block;
+  }
 }
 
 .app-icon {
@@ -228,8 +238,7 @@ h1 {
 }
 
 .block {
-  padding: 4% 6%;
-  overflow: hidden;
+  padding: 3% 6%;
 }
 
 .center {
@@ -240,9 +249,62 @@ h1 {
   font-weight: 600;
 }
 
+.list {
+  list-style: disc;
+  padding: initial;
+  margin: initial;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+  line-height: 28px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+}
+
+.w-50 {
+  width: 50%
+}
+
+.color-gray {
+  color: gray;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-lightblue {
+  color: lightblue;
+}
+
+.color-lightseagreen {
+  color: lightseagreen;
+}
+
+
 @media screen and (max-width: 781px) {
-  .main-column {
+  .container, .main-column {
     width: 100%;
+  }
+
+  .main-column {
+    top: 0;
+    height: auto;
   }
 
   .summary-description,

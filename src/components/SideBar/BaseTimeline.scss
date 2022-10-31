@@ -1,0 +1,23 @@
+@import "../../Model.scss";
+
+.MuiTimelineItem-missingOppositeContent:before {
+  flex: 0 !important;
+}
+
+.MuiTimelineDot-root {
+  padding: 2px  !important;
+  margin-top: 2px  !important;
+  margin-bottom: 2px !important;
+}
+
+.MuiTimelineItem-root {
+  min-height: 36px !important;
+}
+
+.MuiTimelineDot-defaultGrey {
+  background-color: white !important;
+}
+
+.MuiTimelineConnector-root {
+  background-color: white !important;
+}
