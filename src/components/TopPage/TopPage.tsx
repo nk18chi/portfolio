@@ -119,6 +119,7 @@ const myValues = [
   },
 ];
 
+const totalExperience = calcDiffDate(new Date("2019-04-01"), new Date());
 const TopPage: React.FC = () => {
   document.title = "Naoki Mita - privateProject, online resume";
   return (
@@ -126,10 +127,12 @@ const TopPage: React.FC = () => {
       <section id='about-me' className='about-me block'>
         <div className='summary-description'>
           <h1>Naoki Mita</h1>
-          <h3>Software Developer / Data Analyst</h3>
+          <h3>Software Developer / Full Stack Developer</h3>
           <p>
-            I am a software developer specialized in frontend and backend development for web apps. Also, I have experience of being a data analyst. I
-            believe I can help you to grow up your products in every aspect. Check out my privateProject and online resume.
+            I am Full stack developer with {totalExperience.year}+ years of experience in software engineering, who is specializing in React.js,
+            TypeScript, and JavaScript. I'm looking for a passionate engineering team for coding to make it clean and tackle challenges together. And,
+            It would be perfect that the team very respects to the opportunities that I can learn from members and contribute to them. Feel free to
+            reach me out!
           </p>
           <div id='externalLinks'>
             <Button
