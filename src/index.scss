@@ -249,6 +249,54 @@ h3 {
   font-weight: 600;
 }
 
+.list {
+  list-style: disc;
+  padding: initial;
+  margin: initial;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+  line-height: 28px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+}
+
+.w-50 {
+  width: 50%
+}
+
+.color-gray {
+  color: gray;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-lightblue {
+  color: lightblue;
+}
+
+.color-lightseagreen {
+  color: lightseagreen;
+}
+
+
 @media screen and (max-width: 781px) {
   .container, .main-column {
     width: 100%;
