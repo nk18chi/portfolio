@@ -1,6 +1,6 @@
 ## nk18chi.github.io
 
-My personal website [https://nk18chi.github.io/](https://nk18chi.github.io/).
+My personal website [https://nk18chi.github.io/portfolio](https://nk18chi.github.io/portfolio).
 
 Tech Stack:
 
