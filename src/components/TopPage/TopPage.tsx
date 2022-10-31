@@ -198,7 +198,7 @@ const TopPage: React.FC = () => {
             myValues.map((value: any, index: number) => (
               <div key={index} className='vstack w-50'>
                 <div className='hstack'>
-                  <span>{value.icon}</span>
+                  {/* <span>{value.icon}</span> */}
                   <h3>{value.title}</h3>
                 </div>
                 <p>{value.description}</p>
