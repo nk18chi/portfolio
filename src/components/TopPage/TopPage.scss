@@ -50,6 +50,10 @@
 }
 
 #my-values {
+  .stack {
+    justify-content: space-between;
+  }
+  
   .hstack {
     align-items: baseline;
   }
@@ -128,7 +132,7 @@
   }
 
   #my-values {
-    .w-50 {
+    .w-49 {
       width: 100% !important
     }
   }

@@ -30,7 +30,7 @@ export const EXPERIENCES: TExperience[] = [
     company: {
       name: "IdyaFlow Inc",
       description:
-        "Idyaflow provides a CtoC marketplace software to help business owners build and scale their online business. It enables them to open their own marketplace out of box, and the marketplace is customizable depending on their business like Amazon and Airbnb, Uber.",
+        "Idyaflow provides a C2C marketplace software to help business owners build and scale their online business. The product enables them to open their own marketplace right away. The marketplace is customizable depending on their business needs and it can be like Amazon and Airbnb, Uber.",
       location: "Vancouver, Canada",
     },
     startDate: new Date("2020-08-01"),
@@ -91,7 +91,7 @@ export const EXPERIENCES: TExperience[] = [
     company: {
       name: "Bengo4.com Inc",
       description:
-        "Bengo4.com is a platform to connect users to professionals such as lawyers and accountants and offers legal consulting services and a cloud-based contract completion service like Docusign.",
+        "Bengo4.com is a platform for connecting users to professionals such as lawyers and accountants. They and offer legal consulting services and a cloud-based contract completion service like Docusign.",
       location: "Tokyo, Japan",
     },
     startDate: new Date("2014-10-01"),

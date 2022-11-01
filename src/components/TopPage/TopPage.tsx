@@ -95,27 +95,27 @@ const favorites: TFavarites[] = [
 const myValues = [
   {
     icon: <Build className='color-green' />,
-    title: "Passion for making code clean",
+    title: "Passion for writing clean code",
     description:
-      "As a developer, you must spend much more time to read code than write it. So, I believe it is more important to think of how other developers will understand my code than how I like to construct it.",
+      "As a developer, you spend much more time reading code than writing it. Therefore, I believe it is very important to consider how other developers understand my code more than how I want to write it.",
   },
   {
     icon: <DoneAll className='color-green' />,
     title: "Test believer",
     description:
-      "Having test code makes the code understandable, and other developers are not afraid of changing your code without breaking existing functionalities.",
+      "Writing testing code makes code more readable. Besides, other developers are not afraid of changing your code without breaking existing functionalities.",
   },
   {
     icon: <RateReview className='color-green' />,
     title: "Love to review code and be reviewed",
     description:
-      "I would like to know how other developers think of my code and how they write code. It is a great chance of learning new from others!",
+      "I would like to know how other developers think of my code and how they write code. Reviewing code is a great chance to learn from others!",
   },
   {
     icon: <Group className='color-green' />,
-    title: "Working as team takes you go further",
+    title: "Working as a team makes you go further",
     description:
-      "I believe you can achieve more and get your goal faster than you do alone. The great communication is built by the atmosphere that everyone can feel free to ask anything with good manners.",
+      "I believe you can achieve more and get to your goal faster than you do alone. Great communication is built by the enviroment where everyone can be open to discussions.",
   },
 ];
 
@@ -129,10 +129,9 @@ const TopPage: React.FC = () => {
           <h1>Naoki Mita</h1>
           <h3>Software Developer / Full Stack Developer</h3>
           <p>
-            I am Full stack developer with {totalExperience.year}+ years of experience in software engineering, who is specializing in React.js,
-            TypeScript, and JavaScript. I'm looking for a passionate engineering team for coding to make it clean and tackle challenges together. And,
-            It would be perfect that the team very respects to the opportunities that I can learn from members and contribute to them. Feel free to
-            reach me out!
+            I am a Full Stack developer with {totalExperience.year}+ years of experience in software engineering, specializing in React.js,
+            TypeScript, and JavaScript. I am looking for a passionate engineering team to write clean code and tackle challenges together. I value an
+            enviroment where team members are able to learn from each other and make contributions. Please feel free to reach out to me!
           </p>
           <div id='externalLinks'>
             <Button
@@ -199,7 +198,7 @@ const TopPage: React.FC = () => {
         <div className='stack'>
           {myValues.length > 0 &&
             myValues.map((value: any, index: number) => (
-              <div key={index} className='vstack w-50'>
+              <div key={index} className='vstack w-49'>
                 <div className='hstack'>
                   {/* <span>{value.icon}</span> */}
                   <h3>{value.title}</h3>
