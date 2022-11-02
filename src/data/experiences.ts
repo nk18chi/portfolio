@@ -21,7 +21,7 @@ export const EXPERIENCES: TExperience[] = [
       title: "Full Stack Developer",
       contents: [
         "Design and develop the C2C marketplaces which are built by MERN stack with ElasticSearch",
-        "Lead the project of a payment/subscription management system with Stripe",
+        "Built a payment/subscription management system with Stripe from scratch",
         "Develop the E-Commerce application to interact with Salesforce Commerce API and GraphQL",
         "Introduce TDD culture with mocha/chai/sinon to the dev team",
         "Enhance deployment frequency by using Jenkins and TDD",
@@ -30,7 +30,7 @@ export const EXPERIENCES: TExperience[] = [
     company: {
       name: "IdyaFlow Inc",
       description:
-        "Idyaflow provides a C2C marketplace software to help business owners build and scale their online business. The product enables them to open their own marketplace right away. The marketplace is customizable depending on their business needs and it can be like Amazon and Airbnb, Uber.",
+        "Idyaflow provides a C2C marketplace software to help business owners build and scale their online businesses. The product enables them to open their own marketplace right away. The marketplace is customizable depending on their business needs and it can be like Amazon and Airbnb, Uber.",
       location: "Vancouver, Canada",
     },
     startDate: new Date("2020-08-01"),
@@ -62,7 +62,7 @@ export const EXPERIENCES: TExperience[] = [
       title: "Software Developer",
       contents: [
         "Built a meeting room booking system from scratch by using Typescript and React, Firebase.",
-        "Built a real estate app, which users find properties for sale or rent, from scratch by using Python and Django, MySQL.",
+        "Built a real estate app, in which users find properties for sale or rent, from scratch by using Python and Django, MySQL.",
         "Designed test cases by using Unit testing/Factory Boy, and built a development environment to deploy smoothly.",
       ],
     },
@@ -82,7 +82,7 @@ export const EXPERIENCES: TExperience[] = [
       title: "Product Manager/Data Analyst Manager",
       contents: [
         "Built, hired, and trained a team of 5 to handle marketing and analysis for all products.",
-        "Analyzed data with Python and BigQuery, planned strategies for products and marketing.",
+        "Analyzed data with Python and BigQuery, and planned strategies for products and marketing.",
         "Implemented AB test using Javascript and accomplished an increase of 20% in sales of paid subscriptions",
         "Introduced data-visualized dashboards for departments by using Redash, AppScript and Pandas",
         "Developed a marketing tool to analyze SEO/ Adwords / GoogleAd data by using each APIs",
@@ -91,7 +91,7 @@ export const EXPERIENCES: TExperience[] = [
     company: {
       name: "Bengo4.com Inc",
       description:
-        "Bengo4.com is a platform for connecting users to professionals such as lawyers and accountants. They and offer legal consulting services and a cloud-based contract completion service like Docusign.",
+        "Bengo4.com is a platform for connecting users to professionals such as lawyers and accountants. They offer legal consulting services and a cloud-based contract completion service like Docusign.",
       location: "Tokyo, Japan",
     },
     startDate: new Date("2014-10-01"),

@@ -11,7 +11,7 @@ export const PRIVATE_PROJECTS: TprivateProjectData[] = [
   {
     id: 0,
     serviceName: "The Chess Game",
-    serviceDescription: "The Chess Game is a Node application where you can play the chess with another player in command line.",
+    serviceDescription: "The Chess Game is a Node application where you can play chess with another player in the command line.",
     tools: ["Typescript", "Node", "Jest", "Circle CI"],
     githubUrl: "https://github.com/nk18chi/chess-Typescript",
   },
@@ -28,7 +28,7 @@ export const PRIVATE_PROJECTS: TprivateProjectData[] = [
     id: 2,
     serviceName: "Pelican",
     serviceDescription:
-      "Pelican is an e-commerce application that sells cellular phones with data plans and charges monthly sucbscriptions using Stripe.",
+      "Pelican is an e-commerce application that sells cellular phones with data plans and charges monthly subscriptions using Stripe.",
     tools: [
       "React",
       "Next.js",
@@ -52,7 +52,7 @@ export const PRIVATE_PROJECTS: TprivateProjectData[] = [
   {
     id: 3,
     serviceName: "Leetcode - Python",
-    serviceDescription: "This is the repository that I have solved over 400 questions by Python, and each solution come along unit testing.",
+    serviceDescription: "This is the repository where I have solved over 400 questions by Python, and each solution comes along with unit testing.",
     tools: ["Python", "Unitest"],
     githubUrl: "https://github.com/nk18chi/leetcode-python",
   },
@@ -68,7 +68,7 @@ export const PRIVATE_PROJECTS: TprivateProjectData[] = [
   {
     id: 5,
     serviceName: "Web Director Blog",
-    serviceDescription: "Web Director Blog is my blog site for my output of what I recently leanred.",
+    serviceDescription: "Web Director Blog is my blog site for my output of what I leanred.",
     tools: ["Python", "Django", "MySQL"],
     website: "https://webdirector-blog.com/en/",
     githubUrl: "https://github.com/nk18chi/webdirector-blog",
@@ -76,7 +76,7 @@ export const PRIVATE_PROJECTS: TprivateProjectData[] = [
   {
     id: 6,
     serviceName: "Portfolio",
-    serviceDescription: "This is my profile site to get to know me about my career and skills, which is the website you are currently browsing.",
+    serviceDescription: "This is my profile site to get to know about my career and skills, which is the website you are currently browsing.",
     tools: ["React", "Typescript", "SASS"],
     website: "https://nk18chi.github.io",
     githubUrl: "https://github.com/nk18chi/privateProject",

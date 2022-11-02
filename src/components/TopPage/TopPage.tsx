@@ -66,7 +66,7 @@ const favorites: TFavarites[] = [
     title: "Clean Code",
     description: [
       "It is a myth that we can get systems “right the first time.” Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow. This is the essence of iterative and incremental agility. Test-driven development, refactoring, and the clean code they produce make this work at the code level.",
-      "Systems must be clean too.An invasive architecture overwhelms the domain logic and impacts agility.When the domain logic is obscured, quality suffers because bugs find it easier to hide and stories become harder to implement.If agility is compromised, productivity suffers and the benefits of TDD are lost.",
+      "Systems must be clean too. An invasive architecture overwhelms the domain logic and impacts agility. When the domain logic is obscured, quality suffers because bugs find it easier to hide and stories become harder to implement.If agility is compromised, productivity suffers and the benefits of TDD are lost.",
       "Remarkably, following a simple and obvious rule that says we need to have tests and run them continuously impacts our system’s adherence to the primary OO goals of low coupling and high cohesion. Writing tests leads to better designs.",
       "All too often we get our code working and then move on to the next problem without giving sufficient thought to making that code easy for the next person to read. Remember, the most likely next person to read the code will be you. So take a little pride in your workmanship. Spend a little time with each of your functions and classes. Choose better names, split large functions into smaller functions, and generally just take care of what you’ve created. Care is a precious resource.",
     ],
@@ -109,13 +109,13 @@ const myValues = [
     icon: <RateReview className='color-green' />,
     title: "Love to review code and be reviewed",
     description:
-      "I would like to know how other developers think of my code and how they write code. Reviewing code is a great chance to learn from others!",
+      "I would like to know what other developers think of my code and how they write code. Reviewing code is a great chance to learn from others!",
   },
   {
     icon: <Group className='color-green' />,
     title: "Working as a team makes you go further",
     description:
-      "I believe you can achieve more and get to your goal faster than you do alone. Great communication is built by the enviroment where everyone can be open to discussions.",
+      "I believe you can achieve more and get to your goal faster than you do alone. Great communication is built by the environment where everyone can be open to discussions.",
   },
 ];
 
@@ -131,7 +131,7 @@ const TopPage: React.FC = () => {
           <p>
             I am a Full Stack developer with {totalExperience.year}+ years of experience in software engineering, specializing in React.js,
             TypeScript, and JavaScript. I am looking for a passionate engineering team to write clean code and tackle challenges together. I value an
-            enviroment where team members are able to learn from each other and make contributions. Please feel free to reach out to me!
+            environment where team members can learn from each other and make contributions. Please feel free to reach out to me!
           </p>
           <div id='externalLinks'>
             <Button
