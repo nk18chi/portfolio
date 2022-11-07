@@ -40,6 +40,8 @@ export const EXPERIENCES: TExperience[] = [
       "Mongo",
       "Express",
       "Node",
+      "Redux",
+      "React Native",
       "ElasticSearch",
       "GraphQL",
       "Stripe",

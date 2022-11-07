@@ -129,9 +129,9 @@ const TopPage: React.FC = () => {
           <h1>Naoki Mita</h1>
           <h3>Software Developer / Full Stack Developer</h3>
           <p>
-            I am a Full Stack developer with {totalExperience.year}+ years of experience in software engineering, specializing in React.js,
-            TypeScript, and JavaScript. I am looking for a passionate engineering team to write clean code and tackle challenges together. I value an
-            environment where team members can learn from each other and make contributions. Please feel free to reach out to me!
+            I am a Full Stack developer with {totalExperience.year}+ years experience in software engineering, specializing in React.js, TypeScript,
+            and JavaScript. I am looking for a passionate engineering team to write clean code and tackle challenges together. I value an environment
+            where team members can learn from each other and make contributions. Please feel free to reach out to me!
           </p>
           <div id='externalLinks'>
             <Button
